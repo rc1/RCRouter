@@ -7,13 +7,49 @@
 //
 
 #import "RCRouterViewController.h"
+#import "RCRouter.h"
 
 @implementation RCRouterViewController
 
+#pragma mark - Route Calling & Removing at Dealloc
+
+- (void)createRoutes {
+    
+    [RCRouter map:@"/hello/:name/" to:self with:@selector(hello:)];
+    
+}
+
+- (void)callRoutes {
+    
+    [RCRouter dispatch:@"/hello/Ross/"];
+    
+}
+
 - (void)dealloc
 {
+    // example removing a single route
+    [RCRouter remove:@"/hello/:name/"];
+    
+    // example: remove all the routes for this object
+    // this must be done to avoid memory leaks
+    [RCRouter removeAllRoutesToReceiver:self];
+    
     [super dealloc];
 }
+
+#pragma mark - Mapped Routes
+
+
+- (void)hello:(NSDictionary*)params {
+    
+    NSLog(@"Hello was called with the following params \n %@", params);
+    
+}
+
+
+#pragma mark - Hatches, Matches and Dispatches
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -23,15 +59,22 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+
 #pragma mark - View lifecycle
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    // run the tests
+    // this should be setup as unit tests
+    [self createRoutes];
+    [self callRoutes];
+    
 }
-*/
 
 - (void)viewDidUnload
 {

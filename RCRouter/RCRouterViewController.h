@@ -12,4 +12,10 @@
     
 }
 
+// set up example
+- (void)createRoutes;
+- (void)callRoutes;
+
+// mapped routes
+
 @end

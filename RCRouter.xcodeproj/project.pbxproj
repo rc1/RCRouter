@@ -22,6 +22,7 @@
 		91F52DA4139544AB0011D571 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91F52DA2139544AB0011D571 /* InfoPlist.strings */; };
 		91F52DA7139544AB0011D571 /* RCRouterTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 91F52DA6139544AB0011D571 /* RCRouterTests.h */; };
 		91F52DA9139544AB0011D571 /* RCRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F52DA8139544AB0011D571 /* RCRouterTests.m */; };
+		91F52DB61395454A0011D571 /* RCRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F52DB51395454A0011D571 /* RCRouter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,22 +40,24 @@
 		91F52D79139544AA0011D571 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		91F52D7B139544AA0011D571 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		91F52D7D139544AA0011D571 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		91F52D81139544AA0011D571 /* RCRouter-Info.plist */ = {isa = PBXFileReference; path = "RCRouter-Info.plist"; sourceTree = "<group>"; };
+		91F52D81139544AA0011D571 /* RCRouter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RCRouter-Info.plist"; sourceTree = "<group>"; };
 		91F52D83139544AA0011D571 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		91F52D85139544AA0011D571 /* RCRouter-Prefix.pch */ = {isa = PBXFileReference; path = "RCRouter-Prefix.pch"; sourceTree = "<group>"; };
+		91F52D85139544AA0011D571 /* RCRouter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCRouter-Prefix.pch"; sourceTree = "<group>"; };
 		91F52D86139544AA0011D571 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		91F52D88139544AA0011D571 /* RCRouterAppDelegate.h */ = {isa = PBXFileReference; path = RCRouterAppDelegate.h; sourceTree = "<group>"; };
+		91F52D88139544AA0011D571 /* RCRouterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCRouterAppDelegate.h; sourceTree = "<group>"; };
 		91F52D89139544AA0011D571 /* RCRouterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCRouterAppDelegate.m; sourceTree = "<group>"; };
 		91F52D8C139544AB0011D571 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		91F52D8E139544AB0011D571 /* RCRouterViewController.h */ = {isa = PBXFileReference; path = RCRouterViewController.h; sourceTree = "<group>"; };
+		91F52D8E139544AB0011D571 /* RCRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCRouterViewController.h; sourceTree = "<group>"; };
 		91F52D8F139544AB0011D571 /* RCRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCRouterViewController.m; sourceTree = "<group>"; };
 		91F52D92139544AB0011D571 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RCRouterViewController.xib; sourceTree = "<group>"; };
 		91F52D99139544AB0011D571 /* RCRouterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCRouterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91F52DA1139544AB0011D571 /* RCRouterTests-Info.plist */ = {isa = PBXFileReference; path = "RCRouterTests-Info.plist"; sourceTree = "<group>"; };
+		91F52DA1139544AB0011D571 /* RCRouterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RCRouterTests-Info.plist"; sourceTree = "<group>"; };
 		91F52DA3139544AB0011D571 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		91F52DA5139544AB0011D571 /* RCRouterTests-Prefix.pch */ = {isa = PBXFileReference; path = "RCRouterTests-Prefix.pch"; sourceTree = "<group>"; };
+		91F52DA5139544AB0011D571 /* RCRouterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCRouterTests-Prefix.pch"; sourceTree = "<group>"; };
 		91F52DA6139544AB0011D571 /* RCRouterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCRouterTests.h; sourceTree = "<group>"; };
 		91F52DA8139544AB0011D571 /* RCRouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCRouterTests.m; sourceTree = "<group>"; };
+		91F52DB41395454A0011D571 /* RCRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCRouter.h; path = Classes/RCRouter.h; sourceTree = "<group>"; };
+		91F52DB51395454A0011D571 /* RCRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCRouter.m; path = Classes/RCRouter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +116,8 @@
 		91F52D7F139544AA0011D571 /* RCRouter */ = {
 			isa = PBXGroup;
 			children = (
-				91F52D88139544AA0011D571 /* RCRouterAppDelegate.h */,
-				91F52D89139544AA0011D571 /* RCRouterAppDelegate.m */,
-				91F52D8B139544AB0011D571 /* MainWindow.xib */,
-				91F52D8E139544AB0011D571 /* RCRouterViewController.h */,
-				91F52D8F139544AB0011D571 /* RCRouterViewController.m */,
-				91F52D91139544AB0011D571 /* RCRouterViewController.xib */,
+				91F52DB3139545030011D571 /* Main */,
+				91F52DB2139544F90011D571 /* Classes */,
 				91F52D80139544AA0011D571 /* Supporting Files */,
 			);
 			path = RCRouter;
@@ -127,6 +126,8 @@
 		91F52D80139544AA0011D571 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				91F52D8B139544AB0011D571 /* MainWindow.xib */,
+				91F52D91139544AB0011D571 /* RCRouterViewController.xib */,
 				91F52D81139544AA0011D571 /* RCRouter-Info.plist */,
 				91F52D82139544AA0011D571 /* InfoPlist.strings */,
 				91F52D85139544AA0011D571 /* RCRouter-Prefix.pch */,
@@ -153,6 +154,26 @@
 				91F52DA5139544AB0011D571 /* RCRouterTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91F52DB2139544F90011D571 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				91F52DB41395454A0011D571 /* RCRouter.h */,
+				91F52DB51395454A0011D571 /* RCRouter.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		91F52DB3139545030011D571 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				91F52D88139544AA0011D571 /* RCRouterAppDelegate.h */,
+				91F52D89139544AA0011D571 /* RCRouterAppDelegate.m */,
+				91F52D8E139544AB0011D571 /* RCRouterViewController.h */,
+				91F52D8F139544AB0011D571 /* RCRouterViewController.m */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +284,7 @@
 				91F52D87139544AA0011D571 /* main.m in Sources */,
 				91F52D8A139544AA0011D571 /* RCRouterAppDelegate.m in Sources */,
 				91F52D90139544AB0011D571 /* RCRouterViewController.m in Sources */,
+				91F52DB61395454A0011D571 /* RCRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
