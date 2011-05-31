@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91F52D7A139544AA0011D571 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F52D79139544AA0011D571 /* UIKit.framework */; };
+		91F52D7C139544AA0011D571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F52D7B139544AA0011D571 /* Foundation.framework */; };
+		91F52D7E139544AA0011D571 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F52D7D139544AA0011D571 /* CoreGraphics.framework */; };
+		91F52D84139544AA0011D571 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91F52D82139544AA0011D571 /* InfoPlist.strings */; };
+		91F52D87139544AA0011D571 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F52D86139544AA0011D571 /* main.m */; };
+		91F52D8A139544AA0011D571 /* RCRouterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F52D89139544AA0011D571 /* RCRouterAppDelegate.m */; };
+		91F52D8D139544AB0011D571 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F52D8B139544AB0011D571 /* MainWindow.xib */; };
+		91F52D90139544AB0011D571 /* RCRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F52D8F139544AB0011D571 /* RCRouterViewController.m */; };
+		91F52D93139544AB0011D571 /* RCRouterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F52D91139544AB0011D571 /* RCRouterViewController.xib */; };
+		91F52D9A139544AB0011D571 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F52D79139544AA0011D571 /* UIKit.framework */; };
+		91F52D9B139544AB0011D571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F52D7B139544AA0011D571 /* Foundation.framework */; };
+		91F52D9C139544AB0011D571 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F52D7D139544AA0011D571 /* CoreGraphics.framework */; };
+		91F52DA4139544AB0011D571 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91F52DA2139544AB0011D571 /* InfoPlist.strings */; };
+		91F52DA7139544AB0011D571 /* RCRouterTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 91F52DA6139544AB0011D571 /* RCRouterTests.h */; };
+		91F52DA9139544AB0011D571 /* RCRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F52DA8139544AB0011D571 /* RCRouterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91F52D9D139544AB0011D571 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91F52D6C139544A90011D571 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91F52D74139544A90011D571;
+			remoteInfo = RCRouter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		91F52D75139544A90011D571 /* RCRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F52D79139544AA0011D571 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		91F52D7B139544AA0011D571 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		91F52D7D139544AA0011D571 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		91F52D81139544AA0011D571 /* RCRouter-Info.plist */ = {isa = PBXFileReference; path = "RCRouter-Info.plist"; sourceTree = "<group>"; };
+		91F52D83139544AA0011D571 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		91F52D85139544AA0011D571 /* RCRouter-Prefix.pch */ = {isa = PBXFileReference; path = "RCRouter-Prefix.pch"; sourceTree = "<group>"; };
+		91F52D86139544AA0011D571 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		91F52D88139544AA0011D571 /* RCRouterAppDelegate.h */ = {isa = PBXFileReference; path = RCRouterAppDelegate.h; sourceTree = "<group>"; };
+		91F52D89139544AA0011D571 /* RCRouterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCRouterAppDelegate.m; sourceTree = "<group>"; };
+		91F52D8C139544AB0011D571 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		91F52D8E139544AB0011D571 /* RCRouterViewController.h */ = {isa = PBXFileReference; path = RCRouterViewController.h; sourceTree = "<group>"; };
+		91F52D8F139544AB0011D571 /* RCRouterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCRouterViewController.m; sourceTree = "<group>"; };
+		91F52D92139544AB0011D571 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RCRouterViewController.xib; sourceTree = "<group>"; };
+		91F52D99139544AB0011D571 /* RCRouterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RCRouterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F52DA1139544AB0011D571 /* RCRouterTests-Info.plist */ = {isa = PBXFileReference; path = "RCRouterTests-Info.plist"; sourceTree = "<group>"; };
+		91F52DA3139544AB0011D571 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		91F52DA5139544AB0011D571 /* RCRouterTests-Prefix.pch */ = {isa = PBXFileReference; path = "RCRouterTests-Prefix.pch"; sourceTree = "<group>"; };
+		91F52DA6139544AB0011D571 /* RCRouterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCRouterTests.h; sourceTree = "<group>"; };
+		91F52DA8139544AB0011D571 /* RCRouterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCRouterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91F52D72139544A90011D571 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F52D7A139544AA0011D571 /* UIKit.framework in Frameworks */,
+				91F52D7C139544AA0011D571 /* Foundation.framework in Frameworks */,
+				91F52D7E139544AA0011D571 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F52D95139544AB0011D571 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F52D9A139544AB0011D571 /* UIKit.framework in Frameworks */,
+				91F52D9B139544AB0011D571 /* Foundation.framework in Frameworks */,
+				91F52D9C139544AB0011D571 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91F52D6A139544A90011D571 = {
+			isa = PBXGroup;
+			children = (
+				91F52D7F139544AA0011D571 /* RCRouter */,
+				91F52D9F139544AB0011D571 /* RCRouterTests */,
+				91F52D78139544A90011D571 /* Frameworks */,
+				91F52D76139544A90011D571 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91F52D76139544A90011D571 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91F52D75139544A90011D571 /* RCRouter.app */,
+				91F52D99139544AB0011D571 /* RCRouterTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91F52D78139544A90011D571 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91F52D79139544AA0011D571 /* UIKit.framework */,
+				91F52D7B139544AA0011D571 /* Foundation.framework */,
+				91F52D7D139544AA0011D571 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91F52D7F139544AA0011D571 /* RCRouter */ = {
+			isa = PBXGroup;
+			children = (
+				91F52D88139544AA0011D571 /* RCRouterAppDelegate.h */,
+				91F52D89139544AA0011D571 /* RCRouterAppDelegate.m */,
+				91F52D8B139544AB0011D571 /* MainWindow.xib */,
+				91F52D8E139544AB0011D571 /* RCRouterViewController.h */,
+				91F52D8F139544AB0011D571 /* RCRouterViewController.m */,
+				91F52D91139544AB0011D571 /* RCRouterViewController.xib */,
+				91F52D80139544AA0011D571 /* Supporting Files */,
+			);
+			path = RCRouter;
+			sourceTree = "<group>";
+		};
+		91F52D80139544AA0011D571 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91F52D81139544AA0011D571 /* RCRouter-Info.plist */,
+				91F52D82139544AA0011D571 /* InfoPlist.strings */,
+				91F52D85139544AA0011D571 /* RCRouter-Prefix.pch */,
+				91F52D86139544AA0011D571 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91F52D9F139544AB0011D571 /* RCRouterTests */ = {
+			isa = PBXGroup;
+			children = (
+				91F52DA6139544AB0011D571 /* RCRouterTests.h */,
+				91F52DA8139544AB0011D571 /* RCRouterTests.m */,
+				91F52DA0139544AB0011D571 /* Supporting Files */,
+			);
+			path = RCRouterTests;
+			sourceTree = "<group>";
+		};
+		91F52DA0139544AB0011D571 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91F52DA1139544AB0011D571 /* RCRouterTests-Info.plist */,
+				91F52DA2139544AB0011D571 /* InfoPlist.strings */,
+				91F52DA5139544AB0011D571 /* RCRouterTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91F52D74139544A90011D571 /* RCRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91F52DAC139544AB0011D571 /* Build configuration list for PBXNativeTarget "RCRouter" */;
+			buildPhases = (
+				91F52D71139544A90011D571 /* Sources */,
+				91F52D72139544A90011D571 /* Frameworks */,
+				91F52D73139544A90011D571 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCRouter;
+			productName = RCRouter;
+			productReference = 91F52D75139544A90011D571 /* RCRouter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91F52D98139544AB0011D571 /* RCRouterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91F52DAF139544AB0011D571 /* Build configuration list for PBXNativeTarget "RCRouterTests" */;
+			buildPhases = (
+				91F52D94139544AB0011D571 /* Sources */,
+				91F52D95139544AB0011D571 /* Frameworks */,
+				91F52D96139544AB0011D571 /* Resources */,
+				91F52D97139544AB0011D571 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91F52D9E139544AB0011D571 /* PBXTargetDependency */,
+			);
+			name = RCRouterTests;
+			productName = RCRouterTests;
+			productReference = 91F52D99139544AB0011D571 /* RCRouterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91F52D6C139544A90011D571 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 91F52D6F139544A90011D571 /* Build configuration list for PBXProject "RCRouter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 91F52D6A139544A90011D571;
+			productRefGroup = 91F52D76139544A90011D571 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91F52D74139544A90011D571 /* RCRouter */,
+				91F52D98139544AB0011D571 /* RCRouterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91F52D73139544A90011D571 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F52D84139544AA0011D571 /* InfoPlist.strings in Resources */,
+				91F52D8D139544AB0011D571 /* MainWindow.xib in Resources */,
+				91F52D93139544AB0011D571 /* RCRouterViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F52D96139544AB0011D571 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F52DA4139544AB0011D571 /* InfoPlist.strings in Resources */,
+				91F52DA7139544AB0011D571 /* RCRouterTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91F52D97139544AB0011D571 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91F52D71139544A90011D571 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F52D87139544AA0011D571 /* main.m in Sources */,
+				91F52D8A139544AA0011D571 /* RCRouterAppDelegate.m in Sources */,
+				91F52D90139544AB0011D571 /* RCRouterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F52D94139544AB0011D571 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F52DA9139544AB0011D571 /* RCRouterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91F52D9E139544AB0011D571 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91F52D74139544A90011D571 /* RCRouter */;
+			targetProxy = 91F52D9D139544AB0011D571 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		91F52D82139544AA0011D571 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91F52D83139544AA0011D571 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		91F52D8B139544AB0011D571 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91F52D8C139544AB0011D571 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		91F52D91139544AB0011D571 /* RCRouterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91F52D92139544AB0011D571 /* en */,
+			);
+			name = RCRouterViewController.xib;
+			sourceTree = "<group>";
+		};
+		91F52DA2139544AB0011D571 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91F52DA3139544AB0011D571 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91F52DAA139544AB0011D571 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		91F52DAB139544AB0011D571 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		91F52DAD139544AB0011D571 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RCRouter/RCRouter-Prefix.pch";
+				INFOPLIST_FILE = "RCRouter/RCRouter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		91F52DAE139544AB0011D571 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RCRouter/RCRouter-Prefix.pch";
+				INFOPLIST_FILE = "RCRouter/RCRouter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		91F52DB0139544AB0011D571 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RCRouter.app/RCRouter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RCRouterTests/RCRouterTests-Prefix.pch";
+				INFOPLIST_FILE = "RCRouterTests/RCRouterTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		91F52DB1139544AB0011D571 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RCRouter.app/RCRouter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RCRouterTests/RCRouterTests-Prefix.pch";
+				INFOPLIST_FILE = "RCRouterTests/RCRouterTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91F52D6F139544A90011D571 /* Build configuration list for PBXProject "RCRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91F52DAA139544AB0011D571 /* Debug */,
+				91F52DAB139544AB0011D571 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91F52DAC139544AB0011D571 /* Build configuration list for PBXNativeTarget "RCRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91F52DAD139544AB0011D571 /* Debug */,
+				91F52DAE139544AB0011D571 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		91F52DAF139544AB0011D571 /* Build configuration list for PBXNativeTarget "RCRouterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91F52DB0139544AB0011D571 /* Debug */,
+				91F52DB1139544AB0011D571 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91F52D6C139544A90011D571 /* Project object */;
+}
