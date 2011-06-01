@@ -3,16 +3,17 @@
 //  RCRouter
 //
 //  Created by Ross Cairns on 31/05/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  RossCairns.com | TheWorkers.net
 //
 
 #import <Foundation/Foundation.h>
+#import "RCRoute.h"
 
 @protocol RCRouterDelegate <NSObject>
 
 @optional
-// not yet implemented
-- (BOOL)allowDispatchTo:(NSString*)route;
+- (BOOL)allow:(NSString*)route;
+- (void)willDispatchRoute:(NSString*)route to:(id)object;
 - (void)didDispatchRoute:(NSString*)route to:(id)object;
 - (void)noRouteFor:(NSString*)route;
 
@@ -21,7 +22,7 @@
 @interface RCRouter : NSObject {
     
 @private 
-    NSMutableDictionary *_routes;
+    NSMutableArray *_routes;
     id <RCRouterDelegate> _delegate;
     
 }
@@ -36,5 +37,5 @@
 + (void)addDelegate:(id<RCRouterDelegate>)delegate;
 
 // Singleton Methods
-+(RCRouter*)sharedRouter;
++ (RCRouter*)sharedRouter;
 @end

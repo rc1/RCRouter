@@ -3,7 +3,7 @@
 //  RCRouterTests
 //
 //  Created by Ross Cairns on 31/05/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  RossCairns.com | TheWorkers.net
 //
 
 #import <SenTestingKit/SenTestingKit.h>

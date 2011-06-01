@@ -3,11 +3,10 @@
 //  RCRouter
 //
 //  Created by Ross Cairns on 31/05/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  RossCairns.com | TheWorkers.net
 //
 
 #import "RCRouterViewController.h"
-#import "RCRouter.h"
 
 @implementation RCRouterViewController
 
@@ -15,18 +14,25 @@
 
 - (void)createRoutes {
     
+    [RCRouter map:@"/hello/" to:self with:@selector(hello:)];
     [RCRouter map:@"/hello/:name/" to:self with:@selector(hello:)];
+    [RCRouter map:@"/hello/:name/:fishlips/" to:self with:@selector(hello:)];
     
 }
 
 - (void)callRoutes {
     
+    [RCRouter dispatch:@"/your/will/never/find/this"];
+    [RCRouter dispatch:@"/hello/"];
     [RCRouter dispatch:@"/hello/Ross/"];
+    [RCRouter dispatch:@"/hello/from/home/"];
     
 }
 
 - (void)dealloc
 {
+    NSLog(@"RCRouterViewController dealloc");
+    
     // example removing a single route
     [RCRouter remove:@"/hello/:name/"];
     
@@ -45,6 +51,36 @@
     NSLog(@"Hello was called with the following params \n %@", params);
     
 }
+
+
+#pragma mark - Router delegate methods
+
+- (BOOL)allow:(NSString*)route {
+ 
+    // NSLog(@"allow");
+    
+    return YES;
+    
+}
+
+- (void)willDispatchRoute:(NSString*)route to:(id)object {
+    
+    // NSLog(@"willDispatchRoute: %@", route);
+    
+}
+
+- (void)didDispatchRoute:(NSString*)route to:(id)object {
+    
+    // NSLog(@"didDispatchRoute: %@", route);
+    
+}
+
+- (void)noRouteFor:(NSString*)route {
+    
+    NSLog(@"Route not found: %@", route);
+    
+}
+
 
 
 #pragma mark - Hatches, Matches and Dispatches
@@ -68,6 +104,7 @@
 {
     [super viewDidLoad];
     
+    [RCRouter addDelegate:self];
     
     // run the tests
     // this should be setup as unit tests

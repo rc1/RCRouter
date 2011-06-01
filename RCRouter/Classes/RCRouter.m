@@ -3,7 +3,7 @@
 //  RCRouter
 //
 //  Created by Ross Cairns on 31/05/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  RossCairns.com | TheWorkers.net
 //
 
 #import "RCRouter.h"
@@ -14,13 +14,19 @@ static RCRouter *sharedRouter = nil;
 
 @interface RCRouter ()
 
-// private
-- (void)setup;
+// private (called by class methods)
 - (void)map:(NSString*)route to:(id)reciever with:(SEL)selector;
-- (void)dispatch:(NSString*)route;
+- (void)dispatch:(NSString*)path;
 - (void)remove:(NSString*)route;
 - (void)removeAllRoutesToReceiver:(id)receiver;
 - (void)addDelegate:(id<RCRouterDelegate>)delegate;
+
+// private
+- (void)setup;
+
+// utils
+// Delegate methods
+- (BOOL)isValidDelegateForSelector:(SEL)selector;
 
 @end
 
@@ -35,9 +41,9 @@ static RCRouter *sharedRouter = nil;
     
 }
 
-+ (void)dispatch:(NSString*)route {
++ (void)dispatch:(NSString*)path {
     
-    [[RCRouter sharedRouter] dispatch:route];
+    [[RCRouter sharedRouter] dispatch:path];
     
 }
 
@@ -59,13 +65,26 @@ static RCRouter *sharedRouter = nil;
     
 }
 
+#pragma mark utils
+
+- (BOOL)isValidDelegateForSelector:(SEL)selector
+{
+	return ((_delegate != nil) && [_delegate respondsToSelector:selector]);
+}
+
+
 #pragma mark -
 #pragma mark Instance Methods
+
+///////
+///// private instance methods
+///
+//
 
 /// initialisation
 - (void)setup {
     
-    _routes = [[NSMutableDictionary alloc] initWithCapacity:kESTIMATED_NUMBER_OF_ROUTES];
+    _routes = [[NSMutableArray alloc] initWithCapacity:kESTIMATED_NUMBER_OF_ROUTES];
     
 }
 
@@ -74,42 +93,92 @@ static RCRouter *sharedRouter = nil;
 ///
 //
 
-/// using the route as a key, add a dictionary with keys "selector" & "reciever" to the _routes dictionary
 - (void)map:(NSString*)route to:(id)reciever with:(SEL)selector {
     
-    NSDictionary *selectorAndRecieverInfo = [[NSDictionary alloc] initWithObjectsAndKeys:NSStringFromSelector(selector), 
-                                                                         @"selector", 
-                                                                         reciever, 
-                                                                         @"reciever", nil];
+    RCRoute *routeObj = [[RCRoute alloc] initWithRoute:route to:reciever with:selector];
     
-    [_routes setObject:selectorAndRecieverInfo forKey:route];
-   
-    [selectorAndRecieverInfo release];
+    [_routes addObject:routeObj];
+    
+    [routeObj release];
     
 }
 
-- (void)dispatch:(NSString*)route {
+- (void)dispatch:(NSString*)path {
     
-    // say we have params
-    NSDictionary *params; 
-     
-    // say we have matched a route, we would do
-    NSDictionary *validRoute; // this is the route
+    // check with delegate if this is a vaild path
+    if ([self isValidDelegateForSelector:@selector(allow:)]) {
+        
+        BOOL allowedToPreform = ((BOOL)[_delegate performSelector:@selector(allow:) withObject:path]);
+        
+        if (!allowedToPreform) {
+            
+            return;
+        }
+    }
     
-    [self performSelector:NSSelectorFromString([validRoute objectForKey:@"selector"]) withObject:[validRoute objectForKey:@"reciever"] withObject:params];
+    NSEnumerator *routeEnumerator = [_routes objectEnumerator];
+    RCRoute *routeObj;
+    
+    while ((routeObj = [routeEnumerator nextObject])) {
+        
+        // found a match
+        if ( [routeObj matches:path] ) {
+            
+            NSDictionary *params = [routeObj paramsForPath:path];
+            
+            // inform delegate of intention
+            if ([self isValidDelegateForSelector:@selector(willDispatchRoute:to:)]) {
+                
+                [_delegate performSelector:@selector(willDispatchRoute:to:) withObject:path withObject:routeObj.receiver];
+            }
+            
+            // dispatch the route
+            [routeObj.receiver performSelector:routeObj.selector withObject:params];
+            
+            // inform delegate of intention
+            if ([self isValidDelegateForSelector:@selector(didDispatchRoute:to:)]) {
+                
+                [_delegate performSelector:@selector(didDispatchRoute:to:) withObject:path withObject:routeObj.receiver];
+            }
+            
+            return;
+        }
+    }
+    
+    // no match found
+    if ([self isValidDelegateForSelector:@selector(noRouteFor:)]) {
+        
+        [_delegate performSelector:@selector(noRouteFor:) withObject:path];
+    }
+    
+    return;
     
 }
 
 - (void)remove:(NSString*)route {
  
-    [_routes removeObjectForKey:route];
+    NSEnumerator *routesEnumerator = [_routes objectEnumerator];
+    RCRoute *routeObj;
     
+    while ((routeObj = [routesEnumerator nextObject])) {
+        if ([routeObj.route compare:route] == NSOrderedSame) {
+            [_routes removeObject:routeObj];
+            break;
+        }
+    }
 }
 
 /// must be called on a recivers deallocation. removes all routes stored in the _routes dictionary for a specific reciever
-- (void)removeAllRoutesToReceiver:(id)receive {
+- (void)removeAllRoutesToReceiver:(id)receiver {
     
-    NSLog(@"stub: removeAllRoutesForReciever - not going to remove anything yet, try remove:");
+    NSEnumerator *routesEnumerator = [_routes objectEnumerator];
+    RCRoute *routeObj;
+    
+    while ((routeObj = [routesEnumerator nextObject])) {
+        if (routeObj.receiver == receiver) {
+            [_routes removeObject:routeObj];
+        }
+    }
     
 }
 

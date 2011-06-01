@@ -3,12 +3,13 @@
 //  RCRouter
 //
 //  Created by Ross Cairns on 31/05/2011.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  RossCairns.com | TheWorkers.net
 //
 
 #import <UIKit/UIKit.h>
+#import "RCRouter.h"
 
-@interface RCRouterViewController : UIViewController {
+@interface RCRouterViewController : UIViewController<RCRouterDelegate> {
     
 }
 
@@ -17,5 +18,12 @@
 - (void)callRoutes;
 
 // mapped routes
+- (void)hello:(NSDictionary*)params;
+
+// Router delegate methods
+- (BOOL)allow:(NSString*)route;
+- (void)willDispatchRoute:(NSString*)route to:(id)object;
+- (void)didDispatchRoute:(NSString*)route to:(id)object;
+- (void)noRouteFor:(NSString*)route;
 
 @end
