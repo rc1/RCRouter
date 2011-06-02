@@ -1,6 +1,7 @@
 # RCRouter
 
-*Alpha Release (in response this [stackoverflow question](http://stackoverflow.com/questions/6189936/is-there-a-sinatra-style-routing-library-class-for-objective-c))*
+*Alpha Release*  
+*(in response this [stackoverflow question](http://stackoverflow.com/questions/6189936/is-there-a-sinatra-style-routing-library-class-for-objective-c))*
 
 Sinatra Style Routing in Objective-C. A String based routing system not tied to (UIKit or other) Navigation Controller.  
 Currently only compatible with iOS4+.  
@@ -45,7 +46,7 @@ Please fork and improve and send any comment/improvements.
 
 ## Delegate
 
-Add delegate to the Router can also be added by using the following:
+A delegate to the Router can be added by using the following:
 
     [RCRouter addDelegate:self];
 
