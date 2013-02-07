@@ -59,6 +59,10 @@ static RCRouter *sharedRouter = nil;
     
 }
 
++ (BOOL)canRespondToRoute:(NSString*)route {
+    [[RCRouter sharedRouter] canRespondToRoute:route];
+}
+
 + (void)addDelegate:(id<RCRouterDelegate>)delegate {
     
     [[RCRouter sharedRouter] addDelegate:delegate];
@@ -101,6 +105,23 @@ static RCRouter *sharedRouter = nil;
     
     [routeObj release];
     
+}
+
+- (BOOL)canRespondToRoute:(NSString*)route {
+    NSEnumerator *routeEnumerator = [_routes objectEnumerator];
+    RCRoute *routeObj;
+
+    while ((routeObj = [routeEnumerator nextObject])) {
+
+        // found a match
+        if ( [routeObj matches:route] ) {
+            return YES;
+        }
+
+    }
+
+    return NO;
+
 }
 
 - (void)dispatch:(NSString*)path {
@@ -191,6 +212,7 @@ static RCRouter *sharedRouter = nil;
     _delegate = [delegate retain];
 
 }
+
 
 #pragma mark -
 #pragma mark Singleton methods
