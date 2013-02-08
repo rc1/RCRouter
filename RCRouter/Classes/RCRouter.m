@@ -60,7 +60,7 @@ static RCRouter *sharedRouter = nil;
 }
 
 + (BOOL)canRespondToRoute:(NSString*)route {
-    [[RCRouter sharedRouter] canRespondToRoute:route];
+    return [[RCRouter sharedRouter] canRespondToRoute:route];
 }
 
 + (void)addDelegate:(id<RCRouterDelegate>)delegate {
