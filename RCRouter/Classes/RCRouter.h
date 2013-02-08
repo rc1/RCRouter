@@ -32,6 +32,7 @@
 + (void)dispatch:(NSString*)route;
 + (void)remove:(NSString*)route;
 + (void)removeAllRoutesToReceiver:(id)receiver;
++ (BOOL)canRespondToRoute:(NSString*)route;
 
 // To Do
 + (void)addDelegate:(id<RCRouterDelegate>)delegate;
